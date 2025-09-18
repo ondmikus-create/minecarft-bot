@@ -23,7 +23,7 @@ function startBot() {
     // Aktivita: každé 2 minuty napíše zprávu do chatu
     setInterval(() => {
       bot.chat('Jsem tu, nebojte se!');
-    }, 120000);
+    }, 3600000);
   });
 
   bot.on('kicked', (reason) => {
@@ -60,3 +60,4 @@ http.createServer((req, res) => {
 }).listen(port, () => {
   console.log(`🌐 HTTP server běží na portu ${port}`);
 });
+
