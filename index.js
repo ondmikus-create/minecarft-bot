@@ -1,3 +1,4 @@
+const http = require('http');
 const mineflayer = require('mineflayer');
 
 function startBot() {
@@ -33,3 +34,12 @@ function startBot() {
 }
 
 startBot();
+
+// HTTP server pro Render a UptimeRobot
+const port = process.env.PORT || 3000;
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot běží!');
+}).listen(port, () => {
+  console.log(`🌐 HTTP server běží na portu ${port}`);
+});
