@@ -3,14 +3,15 @@ const mineflayer = require('mineflayer');
 
 function startBot() {
   const bot = mineflayer.createBot({
-    host: 'gold.magmanode.com',
-    port: 32830,
-    username: 'AFK_Bot',
-    version: false
+    host: 'gold.magmanode.com', // adresa Minecraft serveru
+    port: 32830,                 // port serveru
+    username: 'AFK_Bot',         // jméno bota
+    version: false               // automatická detekce verze
   });
 
   bot.on('spawn', () => {
     console.log('✅ Bot je na serveru!');
+    // jednoduchý pohyb, aby bot nebyl AFK
     setInterval(() => {
       bot.setControlState('jump', true);
       setTimeout(() => bot.setControlState('jump', false), 500);
