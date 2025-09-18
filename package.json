@@ -6,6 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "mineflayer": "^4.5.0"
+    "mineflayer": "^4.5.0",
+    "readable-stream": "^4.5.2"
   }
 }
